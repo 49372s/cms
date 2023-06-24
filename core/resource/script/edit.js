@@ -147,7 +147,7 @@ function requestDeleteCat(id){
     $.post("/api/admin/edit/delete/category/",{"id":id},(data)=>{
         if(data.result==true){
             showModal("カテゴリの削除","カテゴリの削除に成功しました。");
-            document.getElementById('search-category-edit').ast.value = "";
+            document.getElementById('search-category-edit').act.value = "";
             getCategory();
             toggleLoading(false);
         }
