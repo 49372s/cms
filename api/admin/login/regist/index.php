@@ -15,6 +15,7 @@ if(MYSQL_COMPATIBLE == 0){
         APIResponse(false,"You have reached the maximum number of administrators. The system has rejected your request to create an administrator.<br>For more information, contact your system administrator or developer.");
     }
 }
+if (MYSQL_COMPATIBLE != 1 && $res!=null){
 foreach($res as $val){
     if($val[0]==$_POST['id']){
         APIResponse(false,$_POST['id']." is already exists.");
@@ -26,7 +27,7 @@ foreach($res as $val){
         }
     }
 }
-
+}
 if(NAME_ADMINISTRATOR_DEFINED==1){
     $handle = NAME_ADMINISTRATOR;
 }else{
