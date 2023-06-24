@@ -141,3 +141,15 @@ function getCategoryByName(title){
         }
     });
 }
+
+function requestDeleteCat(id){
+    toggleLoading()
+    $.post("/api/admin/edit/delete/category/",{"id":id},(data)=>{
+        if(data.result==true){
+            showModal("カテゴリの削除","カテゴリの削除に成功しました。");
+            document.getElementById('search-category-edit').ast.value = "";
+            getCategory();
+            toggleLoading(false);
+        }
+    })
+}
