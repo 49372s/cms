@@ -1,5 +1,5 @@
 <?php
-include('../../../connect/func.php');
+include('../../../../connect/func.php');
 if(!APIAuthenticate($_COOKIE['token'])){
     APIResponse(false,"Authenticate failed");
 }
