@@ -15,7 +15,7 @@ define("MAX_ADMINISTRATOR",1);
 
 // +管理者名設定
 // 管理者の名前(ID[ハンドル]とは別に一般表示用の名前)を固定するかどうか。デフォルトは`0`です。
-define("NAME_ADMINISTRATOR_DEFINED",1);
+define("NAME_ADMINISTRATOR_DEFINED",0);
 
 // +管理者名
 // 管理者名設定で[1]を選択した際の管理者名です。全てのアカウントにこの名前が適用されます。デフォルトは"user"です。
@@ -30,5 +30,5 @@ define("SITE_TITLE","サイト名");
 // URLは、絶対パス、あるいはルートパスを利用してください。
 // 絶対パスはhttp://から始まる形式、ルートパスは/をトップとする形式です。パスについて理解できない場合は必ず絶対パスを利用することです。
 // なお、絶対パスを利用する際は、ファイル名までつけるか、ディレクトリの最後に/をつけることを忘れないでください。デフォルトは"http://example.com/toukou/"です。
-define("VIEW_URL","/view/")
+define("VIEW_URL","http://example.com");
 ?>
