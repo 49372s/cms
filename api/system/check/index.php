@@ -6,6 +6,8 @@ $version = "";
 $ch = curl_init("https://api.github.com/repos/49372s/cms/releases");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 $response = curl_exec($ch);
+echo($response);
+exit();
 curl_close($ch);
 
 //受け取ったJSONを仮想配列へと変換する。
@@ -23,6 +25,9 @@ if($version == "1.0.5"){
     APIResponse(true,"Your version is unknown. But, update program is exists. Please run update.");
 }
 //アップデートプログラムを走らせる。
+if($json==null){
+    APIResponse(false,print_r($json));
+}
 foreach($json as $val){
     if(intval($val["tag_name"])>$version){
         //バージョンが低い！！
