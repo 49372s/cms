@@ -26,7 +26,7 @@ loginRedirect();
                                 記事メニュー
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown" id="menu-dropdown">
-                                <li><a href="/dashboard/article/new" class="dropdown-item">新規投稿</a></li>
+                                <li><a href="/dashboard/article/new" class="dropdown-item">新規投稿!?!?</a></li>
                                 <li><a href="/dashboard/article/" class="dropdown-item">記事一覧</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
@@ -59,7 +59,7 @@ loginRedirect();
         </div>
         <script src="/core/resource/script/jq.min.js"></script>
         <script src="/core/resource/script/base.js?<?php echo(time());?>"></script>
-        <script src="/core/resource/script/update.js?ver=1.03"></script>
+        <script src="/core/resource/script/update.js?ver=1.04"></script>
         <script>
             checkUpdate("update_information");
         </script>

@@ -5,7 +5,7 @@
 // -jQuery
 // -Bootstrap
 // -------------------------------
-// version 1.01
+// version 1.04
 
 function checkUpdate(target){
     //checkUpdate(通知先ID)
@@ -19,6 +19,11 @@ function checkUpdate(target){
 
 function doUpdate(){
     $.post("/api/system/update/",(data)=>{
-        console.log(data.data);
+        if(data.result==true){
+            window.alert(data.data);
+            location.reload();
+        }else{
+            window.alert(data.data);
+        }
     });
 }
