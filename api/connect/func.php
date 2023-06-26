@@ -63,7 +63,7 @@ function emptyCheck($keys,$mode="get"){
             }
         }else{
             if(empty($_POST[$key])){
-                APIResponse(false,"Bad request(POST).");
+                APIResponse(false,"Bad request(POST).".$key);
             }
         }
     }
