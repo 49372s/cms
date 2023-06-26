@@ -49,7 +49,19 @@ loginRedirect();
                 </div>
             </div>
         </nav>
+        <div class="mt-2 me-2 ms-2 mb-2">
+            <h2>アップデート</h2>
+            <div id="update_information">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </div>
         <script src="/core/resource/script/jq.min.js"></script>
         <script src="/core/resource/script/base.js?<?php echo(time());?>"></script>
+        <script src="/core/resource/script/update.js?ver=1.02"></script>
+        <script>
+            checkUpdate("update_information");
+        </script>
     </body>
 </html>
