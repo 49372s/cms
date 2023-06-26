@@ -32,6 +32,7 @@ if ($res === TRUE) {
     APIResponse(false,"Failed select zip file");
 }
 //アップデートするファイルをconfigから読み出す
+include(VS_DR."/core/resource/config/update.php");
 $target = UPDATE_FILE_LIST;
 
 //パスを設定する
@@ -41,6 +42,14 @@ $from = VS_DR."/api/system/update/tmp/$version/cms-$version/";
 $to = VS_DR."/";
 //コピーを開始
 foreach($target as $file){
+    if(!copy($from.$file,$to.$file)){
+        APIResponse(false,"An error was detected while copying the file. File copy was forcibly terminated.<br>For more information, please contact a technician.");
+    }
+}
+//コピーを完了。次はConfig.phpに載っていない新規ファイルのコピー。
+if(file_exists($from."new_file.php")){
+    include($from."new_file.php");
+    //必ず変数は($newfilesforupdate)にしてください。
     if(!copy($from.$file,$to.$file)){
         APIResponse(false,"An error was detected while copying the file. File copy was forcibly terminated.<br>For more information, please contact a technician.");
     }
