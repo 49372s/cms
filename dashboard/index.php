@@ -59,7 +59,7 @@ loginRedirect();
         </div>
         <script src="/core/resource/script/jq.min.js"></script>
         <script src="/core/resource/script/base.js?<?php echo(time());?>"></script>
-        <script src="/core/resource/script/update.js?ver=1.02"></script>
+        <script src="/core/resource/script/update.js?ver=1.03"></script>
         <script>
             checkUpdate("update_information");
         </script>

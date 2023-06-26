@@ -16,3 +16,9 @@ function checkUpdate(target){
         }
     })
 }
+
+function doUpdate(){
+    $.post("/api/system/update/",(data)=>{
+        console.log(data.data);
+    });
+}
