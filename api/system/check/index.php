@@ -3,7 +3,7 @@ include('../../connect/func.php');
 $version = "";
 
 //バージョンのチェックを行うためにGitHubのサーバーにアクセスする。
-$ch = curl_init("https://api.github.com/repos/49372s/cms/releases");
+$ch = curl_init("https://api.github.com/repos/49372s/TTR-CMS/releases");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch,CURLOPT_USERAGENT,"TKNGH/2.01 (Apache2 / Linux)");
 $response = curl_exec($ch);
