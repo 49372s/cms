@@ -52,8 +52,10 @@ foreach($target as $file){
 if(file_exists($from."new_file.php")){
     include($from."new_file.php");
     //必ず変数は($newfilesforupdate)にしてください。
-    if(!copy($from.$file,$to.$file)){
-        APIResponse(false,"An error was detected while copying the file. File copy was forcibly terminated.<br>For more information, please contact a technician.");
+    foreach($newFilesForUpdate as $file){
+        if(!copy($from.$file,$to.$file)){
+            APIResponse(false,"An error was detected while copying the file. File copy was forcibly terminated.<br>For more information, please contact a technician.");
+        }
     }
 }
 $fhd = fopen(VS_DR."/api/system/version.txt","w");
